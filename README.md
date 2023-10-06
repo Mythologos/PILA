@@ -20,12 +20,12 @@ The tables below summarize basic statistics of our dataset in its current versio
 The first table describes statistics relative to the languages involved in the data.
 The second table describes statistics which examine the relationship between the two languages.
 
-| Object         | Latin | Proto-Italic | All |
-|----------------|-------|--------------|-----|
-| Forms          | .     | .            | .   |
-| Phonemes       | .     | .            | .   |
-| Phoneme Types  | .     | .            | .   |
-| Average Length | .     | .            | .   |
+| Object         | Latin       | Proto-Italic | All         |
+|----------------|-------------|--------------|-------------|
+| Forms          | 2878        | 2934         | 5812        |
+| Phonemes       | 16388       | 19299        | 35687       |
+| Phoneme Types  | 31          | 44           | 47          |
+| Average Length | 5.69 ± 1.44 | 6.58 ± 1.77  | 6.14 ± 1.67 |
 
 | Measure            | Quantity |
 |--------------------|----------|
@@ -117,7 +117,6 @@ We provide their citations here:
   copyright = {Creative Commons Attribution-ShareAlike License},
   langid = {english},
   annotation = {Page Version ID: 47078291},
-  file = {C:\Users\sbjr1\Zotero\storage\AHK2I73A\CategoryLatin_terms_derived_from_Proto-Italic.html}
 }
 
 @book{deVaan2008,
