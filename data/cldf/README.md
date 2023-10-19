@@ -54,7 +54,7 @@
 
 | property                                     | value |
 |----------------------------------------------|-------|
-| [dc:extent](http://purl.org/dc/terms/extent) | 230   |
+| [dc:extent](http://purl.org/dc/terms/extent) | 229   |
 
 ### Columns
 

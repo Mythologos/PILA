@@ -25,7 +25,7 @@ The second table describes statistics which examine the relationship between the
 |----------------|-----------|--------------|-----------|
 | Forms          | 2857      | 2915         | 5772      |
 | Phones         | 15956     | 18766        | 34721     |
-| Phone Types    | 33        | 45           | 50        |
+| Phone Types    | 33        | 44           | 49        |
 | Average Length | 5.6 ± 1.4 | 6.4 ± 1.8    | 6.0 ± 1.7 |
 
 ### Use 

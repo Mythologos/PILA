@@ -193,7 +193,7 @@
             "url": "cognates.csv"
         },
         {
-            "dc:extent": 230,
+            "dc:extent": 229,
             "tableSchema": {
                 "columns": [
                     {
