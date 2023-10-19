@@ -1,7 +1,7 @@
 # PILA
 
 **Authors**:
-* Stephen Bothwell, Darcey Riley, David Chiang, Brian Krostenko (University of Notre Dame)
+* Stephen Bothwell, David Chiang, Brian Krostenko (University of Notre Dame)
 * Brian DuSell (ETH Zürich)
 
 **Maintainer**: Stephen Bothwell
@@ -10,9 +10,10 @@
 
 This repository contains the **P**roto-**I**talic to **La**tin dataset. 
 It models reflex-etymon relationships between these two languages. 
-It also provides a variety of both phonological and non-phonological metadata.
+It also provides a variety of both phonetic and non-phonetic metadata.
 All this is purposed toward work in computational historical linguistics, 
-permitting deeper studies of this language pair on a systemic level relative to current findings in historical linguistics. 
+permitting deeper studies of this language pair on a systematic level relative to 
+current findings in historical linguistics. 
 
 ### Statistics
 
@@ -20,24 +21,12 @@ The tables below summarize basic statistics of our dataset in its current versio
 The first table describes statistics relative to the languages involved in the data.
 The second table describes statistics which examine the relationship between the two languages.
 
-| Object         | Latin       | Proto-Italic | All         |
-|----------------|-------------|--------------|-------------|
-| Forms          | 2878        | 2934         | 5812        |
-| Phonemes       | 16388       | 19299        | 35687       |
-| Phoneme Types  | 31          | 44           | 47          |
-| Average Length | 5.69 ± 1.44 | 6.58 ± 1.77  | 6.14 ± 1.67 |
-
-| Measure            | Quantity |
-|--------------------|----------|
-| Word Error Rate    | .        |
-| Phoneme Error Rate | .        |
-
-In the latter table, we use Word Error Rate (WER) and Phoneme Error Rate (PER), following Cathcart and Rama (2020).
-
-**[[TODO: clarify to be sure that the exact same algorithms are used; 
-if not, then point to our paper or provide some kind of equation visual]]**
-
-**[[TODO: clarify position on whether one or multiple etyma are involved in determining the score presented for a single pair.]]**
+| Object         | Latin     | Proto-Italic | All       |
+|----------------|-----------|--------------|-----------|
+| Forms          | 2857      | 2915         | 5772      |
+| Phones         | 15956     | 18766        | 34721     |
+| Phone Types    | 33        | 45           | 50        |
+| Average Length | 5.6 ± 1.4 | 6.4 ± 1.8    | 6.0 ± 1.7 |
 
 ### Use 
 
@@ -72,10 +61,12 @@ These irregularities are generally explained in the `Comment` category,
 and we use a tag for that irregularity in square brackets (*e.g.*, `[Analogy]`) to denote a reference to that irregularity type.
 6. `tags.csv`: a CSV file which contains morphological information concerning the Latin forms involved in the dataset. 
 We provide information such as `Part_of_Speech`, `Inflection_Class`, and a host of other morphological tags. 
-7. `sources.bib`: a collection of resources in BibTeX format used in the process of creating this data. 
+7. `overlaps.csv`: a CSV file which links forms in our dataset to other datasets. 
+Link datasets are named in the `Dataset` column and cited in the `Source` column. 
+IDs for the PILA form are given in the `Form_ID` column and for the other dataset in the `Other_Form_ID` column.
+8. `sources.bib`: a collection of resources in BibTeX format used in the process of creating this data. 
 Keys in any `Source` column of any table of the dataset should cross-reference a key in this file.
 
-**[[TODO: some column specifications can be improved w.r.t. specificity.]]**
 **[[TODO: part-of-speech tags remain vague, and the notation used needs to be made clear. 
 Might use the codes.csv file from CLDF to store such data and avoid the need to exhaustively explain it.]]**
 
@@ -140,20 +131,6 @@ Sources are linked with their contributed information where applicable in `Sourc
 Regarding the discussions within this file, papers cited here not otherwise included in our cited works are as follows:
 
 ``` 
-@inproceedings{cathcartDisentanglingDialectsNeural2020,
-  title = {Disentangling Dialects: {{A}} Neural Approach to {{Indo-Aryan}} Historical Phonology and Subgrouping},
-  booktitle = {Proceedings of the 24th {{Conference}} on {{Computational Natural Language Learning}}},
-  author = {Cathcart, Chundra and Rama, Taraka},
-  year = {2020},
-  month = nov,
-  volume = {24},
-  pages = {620--630},
-  publisher = {{Association for Computational Linguistics}},
-  address = {{Online}},
-  doi = {10.18653/v1/2020.conll-1.50},
-  abstract = {This paper seeks to uncover patterns of sound change across Indo-Aryan languages using an LSTM encoder-decoder architecture. We augment our models with embeddings represent-ing language ID, part of speech, and other features such as word embeddings. We find that a highly augmented model shows highest accuracy in predicting held-out forms, and investigate other properties of interest learned by our models' representations. We outline extensions to this architecture that can better capture variation in Indo-Aryan sound change.}
-}
-
 @misc{forkelPycldfPythonLibrary,
   title = {Pycldf: {{A}} Python Library to Read and Write {{CLDF}} Datasets},
   shorttitle = {Pycldf},
