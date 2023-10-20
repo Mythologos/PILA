@@ -30,11 +30,11 @@ The second table describes statistics which examine the relationship between the
 
 ### Use 
 
-**[[TODO: License]]**
+**[[A license for the dataset's use by the community will be designated.]]**
 
 ## Background
 
-**[[TODO: provide background description]]**
+**[[A background description will be incorporated after further feedback on the paper is obtained.]]**
 
 ## Contents
 
@@ -56,19 +56,14 @@ Each form (`Form_ID`) links with a cognate set ID (`Cognateset_ID`).
 4. `languages.csv`: a CSV file which contains basic information about the languages involved in this dataset, 
 including languages IDs (`ID`), names (`Name`), approximate locations (`Latitude`, `Longitude`), and linguistic resource codes (`Glottocode`, `ISO639P3Code`).
 5. `glosses.csv`: a CSV file which contains information about irregular changes and other special notations for our word forms. 
-These are spread across nine categories which serve as booleans. 
+These are spread across five categories which serve as booleans. 
 These irregularities are generally explained in the `Comment` category,
-and we use a tag for that irregularity in square brackets (*e.g.*, `[Analogy]`) to denote a reference to that irregularity type.
-6. `tags.csv`: a CSV file which contains morphological information concerning the Latin forms involved in the dataset. 
-We provide information such as `Part_of_Speech`, `Inflection_Class`, and a host of other morphological tags. 
-7. `overlaps.csv`: a CSV file which links forms in our dataset to other datasets. 
+and we use a tag for that irregularity in square brackets (*e.g.*, `[Association]`) to denote a reference to that irregularity type.
+6. `overlaps.csv`: a CSV file which links forms in our dataset to other datasets. 
 Link datasets are named in the `Dataset` column and cited in the `Source` column. 
 IDs for the PILA form are given in the `Form_ID` column and for the other dataset in the `Other_Form_ID` column.
-8. `sources.bib`: a collection of resources in BibTeX format used in the process of creating this data. 
+7. `sources.bib`: a collection of resources in BibTeX format used in the process of creating this data. 
 Keys in any `Source` column of any table of the dataset should cross-reference a key in this file.
-
-**[[TODO: part-of-speech tags remain vague, and the notation used needs to be made clear. 
-Might use the codes.csv file from CLDF to store such data and avoid the need to exhaustively explain it.]]**
 
 ## Contributing
 
@@ -93,6 +88,7 @@ To cite this dataset, please use the following paper citation:
 
 For the creation of this dataset, we primarily consulted Wiktionary in the formation of the initial dataset. 
 We also used Michiel de Vaan's *Etymological Dictionary of Latin and the other Italic Languages* as a major supplementary resource.
+Furthermore, we consulted a variety of etymological dictionaries and grammars in the process of creating this dataset.
 We provide their citations here:
 
 ```
@@ -121,6 +117,55 @@ We provide their citations here:
   isbn = {978-90-04-16797-1},
   langid = {english},
   keywords = {Italic languages and dialects -- Etymology -- Dictionaries,Latin language -- Etymology -- Dictionaries,Proto-Indo-European language -- Etymology -- Dictionaries}
+}
+
+@book{baldiFoundationsLatin2002,
+  title = {The {{Foundations}} of {{Latin}}},
+  author = {Baldi, Philip},
+  year = {2002},
+  publisher = {{Mouton de Gruyter}},
+  address = {{Berlin; New York}},
+  langid = {english}
+}
+
+@book{ernoutDictionnaireEtymologiqueLangue2001,
+  title = {Dictionnaire \'Etymologique de La Langue Latine},
+  author = {Ernout, Alfred and Meillet, Alfred},
+  year = {2001},
+  publisher = {{Klinksieck}},
+  address = {{Paris}}
+}
+
+@book{leumannLateinscheLautUnd1977,
+  title = {Lateinsche {{Laut-}} Und {{Formenlehre}}},
+  author = {Leumann, Manu},
+  year = {1977},
+  publisher = {{C.H. Beck}},
+  address = {{Munich}}
+}
+
+@book{meiserHistorischeLautUnd2010,
+  title = {Historische {{Laut-}} Und {{Formenlehre}} Der Lateinischen {{Sprache}}},
+  author = {Meiser, Gerhard},
+  year = {2010},
+  publisher = {{Wissenschaftliche Buchgesellschaft}},
+  address = {{Darmstadt}}
+}
+
+@book{sihlerNewComparativeGrammar1995,
+  title = {New {{Comparative Grammar}} of {{Greek}} and {{Latin}}},
+  author = {Sihler, Andrew},
+  year = {1995},
+  publisher = {{Oxford University Press}},
+  address = {{New York; Oxford}}
+}
+
+@book{waldeLateinischesEtymologischesWorterbuch1938,
+  title = {Lateinisches Etymologisches {{W\"orterbuch}}},
+  author = {Walde, Alois and Hofmann, J.B.},
+  year = {1938},
+  publisher = {{Carl Winter}},
+  address = {{Heidelberg}}
 }
 ```
 
