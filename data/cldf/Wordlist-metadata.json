@@ -10,7 +10,7 @@
     "tables": [
         {
             "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#FormTable",
-            "dc:extent": 5772,
+            "dc:extent": 5778,
             "tableSchema": {
                 "columns": [
                     {
@@ -36,6 +36,10 @@
                         "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#parameterReference",
                         "required": true,
                         "name": "Parameter_ID"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Lemma_ID"
                     },
                     {
                         "datatype": "string",
@@ -93,6 +97,17 @@
                                 "ID"
                             ]
                         }
+                    },
+                    {
+                        "columnReference": [
+                            "Lemma_ID"
+                        ],
+                        "reference": {
+                            "resource": "lemmata.csv",
+                            "columnReference": [
+                                "ID"
+                            ]
+                        }
                     }
                 ],
                 "primaryKey": [
@@ -103,7 +118,7 @@
         },
         {
             "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#CognateTable",
-            "dc:extent": 5772,
+            "dc:extent": 5778,
             "tableSchema": {
                 "columns": [
                     {
@@ -178,7 +193,7 @@
             "url": "cognates.csv"
         },
         {
-            "dc:extent": 228,
+            "dc:extent": 230,
             "tableSchema": {
                 "columns": [
                     {
@@ -325,7 +340,31 @@
             "url": "languages.csv"
         },
         {
-            "dc:extent": 2757,
+            "dc:extent": 1433,
+            "tableSchema": {
+                "columns": [
+                    {
+                        "datatype": {
+                            "base": "string",
+                            "format": "[a-zA-Z0-9_\\-]+"
+                        },
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
+                        "name": "ID"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#name",
+                        "name": "Name"
+                    }
+                ],
+                "primaryKey": [
+                    "ID"
+                ]
+            },
+            "url": "lemmata.csv"
+        },
+        {
+            "dc:extent": 6388,
             "tableSchema": {
                 "columns": [
                     {
@@ -368,7 +407,7 @@
                         "dc:extent": "singlevalued",
                         "datatype": {
                             "base": "string",
-                            "format": "[a-zA-Z0-9_\\-]+"
+                            "format": "[a-zA-Z0-9_\\-:;]+"
                         },
                         "required": true,
                         "name": "Other_Form_ID"
