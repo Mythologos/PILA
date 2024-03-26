@@ -188,11 +188,11 @@ The current version is `v1.0.0`, and changes in version should follow the genera
 To cite this dataset, please use the following paper's citation:
 
 ```
-@inproceedings{bothwellPILAHistoricallinguisticDataset2024,
+@inproceedings{bothwellPILA2024,
   title = {{{PILA}}: {{A}} Historical-Linguistic Dataset of {{Proto-Italic}} and {{Latin}}},
   booktitle = {Proceedings of the {{The}} 2024 {{Joint International Conference}} on {{Computational Linguistics}}, {{Language Resources}} and {{Evaluation}}},
   author = {Bothwell, Stephen and DuSell, Brian and Chiang, David and Krostenko, Brian},
-  year = {2024},
+  year = "2024",
   month = may,
   publisher = {European Language Resources Association},
   address = {Turin, Italy},
