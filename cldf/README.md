@@ -24,6 +24,7 @@
 | [Parameter_ID](http://cldf.clld.org/v1.0/terms.rdf#parameterReference) | `string`                            | A reference to the meaning denoted by the form                                                                                                                                                                                                                                                                                                                                                                                  |
 | `Lemma_ID`                                                             | `string`                            | References [lemmata.csv::ID](#table-lemmatacsv)                                                                                                                                                                                                                                                                                                                                                                                 |
 | `Gloss_ID`                                                             | `string`                            | References [glosses.csv::ID](#table-glossescsv)                                                                                                                                                                                                                                                                                                                                                                                 |
+| `Tag_ID`                                                               | `string`                            | References [tags.csv::ID](#table-tagscsv)                                                                                                                                                                                                                                                                                                                                                                                       |
 | [Form](http://cldf.clld.org/v1.0/terms.rdf#form)                       | `string`                            | The written expression of the form. If possible the transcription system used for the written form should be described in CLDF metadata (e.g. via adding a common property `dc:conformsTo` to the column description using concept URLs of the GOLD Ontology (such as [phonemicRep](http://linguistics-ontology.org/gold/2010/phonemicRep) or [phoneticRep](http://linguistics-ontology.org/gold/2010/phoneticRep)) as values). |
 | [Segments](http://cldf.clld.org/v1.0/terms.rdf#segments)               | list of `string` (separated by ` `) |                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | [Comment](http://cldf.clld.org/v1.0/terms.rdf#comment)                 | `string`                            |                                                                                                                                                                                                                                                                                                                                                                                                                                 |
@@ -97,6 +98,30 @@
 |--------------------------------------------------|----------|-------------|
 | [ID](http://cldf.clld.org/v1.0/terms.rdf#id)     | `string` | Primary key |
 | [Name](http://cldf.clld.org/v1.0/terms.rdf#name) | `string` |             |
+
+## <a name="table-tagscsv"></a>Table [tags.csv](./tags.csv)
+
+| property                                     | value |
+|----------------------------------------------|-------|
+| [dc:extent](http://purl.org/dc/terms/extent) | 111   |
+
+### Columns
+
+| Name/Property                                          | Datatype                            | Description                                         |
+|--------------------------------------------------------|-------------------------------------|-----------------------------------------------------|
+| [ID](http://cldf.clld.org/v1.0/terms.rdf#id)           | `string`                            | Primary key                                         |
+| `Case`                                                 | `string`                            |                                                     |
+| `Degree`                                               | `string`                            |                                                     |
+| `Gender`                                               | `string`                            |                                                     |
+| `Inflection_Class`                                     | `string`                            |                                                     |
+| `Mood`                                                 | `string`                            |                                                     |
+| `Number`                                               | `string`                            |                                                     |
+| `Part_of_Speech`                                       | `string`                            |                                                     |
+| `Person`                                               | `string`                            |                                                     |
+| `Tense`                                                | `string`                            |                                                     |
+| `Voice`                                                | `string`                            |                                                     |
+| [Comment](http://cldf.clld.org/v1.0/terms.rdf#comment) | `string`                            |                                                     |
+| [Source](http://cldf.clld.org/v1.0/terms.rdf#source)   | list of `string` (separated by `;`) | References [sources.bib::BibTeX-key](./sources.bib) |
 
 ## <a name="table-overlapscsv"></a>Table [overlaps.csv](./overlaps.csv)
 

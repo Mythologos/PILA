@@ -46,6 +46,10 @@
                         "name": "Gloss_ID"
                     },
                     {
+                        "datatype": "string",
+                        "name": "Tag_ID"
+                    },
+                    {
                         "dc:description": "The written expression of the form. If possible the transcription system used for the written form should be described in CLDF metadata (e.g. via adding a common property `dc:conformsTo` to the column description using concept URLs of the GOLD Ontology (such as [phonemicRep](http://linguistics-ontology.org/gold/2010/phonemicRep) or [phoneticRep](http://linguistics-ontology.org/gold/2010/phoneticRep)) as values).",
                         "dc:extent": "singlevalued",
                         "datatype": "string",
@@ -104,6 +108,17 @@
                         ],
                         "reference": {
                             "resource": "lemmata.csv",
+                            "columnReference": [
+                                "ID"
+                            ]
+                        }
+                    },
+                    {
+                        "columnReference": [
+                            "Tag_ID"
+                        ],
+                        "reference": {
+                            "resource": "tags.csv",
                             "columnReference": [
                                 "ID"
                             ]
@@ -362,6 +377,76 @@
                 ]
             },
             "url": "lemmata.csv"
+        },
+        {
+            "dc:extent": 111,
+            "tableSchema": {
+                "columns": [
+                    {
+                        "datatype": {
+                            "base": "string",
+                            "format": "[a-zA-Z0-9_\\-]+"
+                        },
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
+                        "name": "ID"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Case"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Degree"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Gender"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Inflection_Class"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Mood"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Number"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Part_of_Speech"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Person"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Tense"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Voice"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#comment",
+                        "name": "Comment"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#source",
+                        "separator": ";",
+                        "name": "Source"
+                    }
+                ],
+                "primaryKey": [
+                    "ID"
+                ]
+            },
+            "url": "tags.csv"
         },
         {
             "dc:extent": 6388,
